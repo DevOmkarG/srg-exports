@@ -27,3 +27,13 @@
   .reveal { opacity: 1; transform: none; transition: none; }
   * { animation-duration: .01ms !important; transition-duration: .01ms !important; }
 }
+
+
+/* Hero effects */
+@keyframes hero-zoom { from { transform: scale(1); } to { transform: scale(1.12); } }
+@keyframes hero-float { 0%, 100% { translate: 0 0; } 50% { translate: 0 -10px; } }
+.hero-zoom img { animation: hero-zoom 24s ease-in-out infinite alternate; }
+.hero-float { animation: hero-float 6s ease-in-out infinite; }
+@media (prefers-reduced-motion: reduce) {
+  .hero-zoom img, .hero-float { animation: none; }
+}

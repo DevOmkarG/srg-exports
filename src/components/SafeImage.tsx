@@ -27,7 +27,7 @@ export default function SafeImage({ src, alt, className = '', eager = false, fal
   }
 
   return (
-    <div className={`relative overflow-hidden bg-forest/10 ${className}`}>
+    <div className={`${className.includes('absolute') ? '' : 'relative'} overflow-hidden bg-forest/10 ${className}`}>
       {status === 'loading' && <div className="absolute inset-0 animate-pulse bg-forest/10" aria-hidden="true" />}
       <img
         src={src}
