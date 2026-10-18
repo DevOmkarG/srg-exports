@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# TODO: replace the placeholder domain with your real domain
+Sitemap: https://www.your-domain-here.com/sitemap.xml
